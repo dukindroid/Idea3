@@ -1,0 +1,1 @@
+// Debe poder ver todos sus tickets y editarlos mientras que el código de status del tocket no sea 'entregado'
