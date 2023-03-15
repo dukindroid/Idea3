@@ -1,4 +1,4 @@
-// Debe listar  todos  usuarios, y poder editarlios y borrarlos.
+// Debe listar  todos  usuarios, y poder Createarlios y borrarlos.
 import React from "react";
 import {
   Datagrid,
@@ -9,29 +9,25 @@ import {
 } from "react-admin";
 // import AvatarField from "../../components/AvatarField";
 
-export const ListAddress = () => {
-  // const apiUrl = "https://powerful-daybreak.pockethost.io/api";
-  // const record = useRecordContext();
-  // console.dir(record);
-  // const src = `${apiUrl}/${record.collectionId}/${record.id}/${record.avatar}?thumb=100x100`;
-  // console.log(src);
+export const CreateAddress = () => (
+  <Create>
+      <SimpleForm>
+          <TextInput source="calle" />
+          <ReferenceInput source="collectionId" reference="collections" />
+          <TextInput source="collectionName" />
+          <DateInput source="created" />
+          <TextInput source="id" />
+          <NumberInput source="numero" />
+          <DateInput source="updated" />
+          <TextInput source="expand" />
+      </SimpleForm>
+  </Create>
+);
 
-  return (
-    <>
-      <div>ListAddress</div>
-      <List>
-        <Datagrid rowClick="edit">
-          <TextField source="calle" />
-          <TextField source="numero" />
-        </Datagrid>
-      </List>
-    </>
-  );
-};
 
 
 /*
-// Debe listar  todos  usuarios, y poder editarlios y borrarlos.
+// Debe listar  todos  usuarios, y poder Createarlios y borrarlos.
 import React, { useState } from "react";
 import {
   Title,

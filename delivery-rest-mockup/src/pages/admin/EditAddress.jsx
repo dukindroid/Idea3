@@ -9,25 +9,21 @@ import {
 } from "react-admin";
 // import AvatarField from "../../components/AvatarField";
 
-export const ListAddress = () => {
-  // const apiUrl = "https://powerful-daybreak.pockethost.io/api";
-  // const record = useRecordContext();
-  // console.dir(record);
-  // const src = `${apiUrl}/${record.collectionId}/${record.id}/${record.avatar}?thumb=100x100`;
-  // console.log(src);
+export const EditAddress = () => (
+  <Edit>
+      <SimpleForm>
+          <TextInput source="calle" />
+          <ReferenceInput source="collectionId" reference="collections" />
+          <TextInput source="collectionName" />
+          <DateInput source="created" />
+          <TextInput source="id" />
+          <NumberInput source="numero" />
+          <DateInput source="updated" />
+          <TextInput source="expand" />
+      </SimpleForm>
+  </Edit>
+);
 
-  return (
-    <>
-      <div>ListAddress</div>
-      <List>
-        <Datagrid rowClick="edit">
-          <TextField source="calle" />
-          <TextField source="numero" />
-        </Datagrid>
-      </List>
-    </>
-  );
-};
 
 
 /*

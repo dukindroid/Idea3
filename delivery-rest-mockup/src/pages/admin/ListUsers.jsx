@@ -20,7 +20,7 @@ export const ListUsers = () => {
     <>
       <div>ListUsers</div>
       <List>
-        <Datagrid>
+        <Datagrid rowClick="edit">
           <AvatarField source="avatar" />
           <TextField source="name" />
           <TextField source="rol" />

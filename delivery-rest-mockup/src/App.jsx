@@ -4,6 +4,7 @@ import {
   Admin,
   // Resource
   CustomRoutes,
+  EditGuesser,
   Resource,
 } from "react-admin";
 // import simpleRestProvider from "ra-data-simple-rest";
@@ -19,6 +20,12 @@ import MyLayout from "./layouts/MyLayout";
 import MainView from "./pages/mainview";
 import { default as myDataProvider } from "./providers/dataProvider";
 import { ListAddress } from "./pages/admin/ListAddress";
+import EditUsers from "./pages/admin/EditUsers";
+import CreateUsers from "./pages/admin/CreateUser";
+import { EditProducts } from "./pages/admin/EditProducts";
+import { CreateProducts } from "./pages/admin/CreateProducts";
+import { CreateAddress } from "./pages/admin/CreateAddress";
+import { EditAddress } from "./pages/admin/EditAddress";
 
 const App = () => {
   // const queryClient = new QueryClient();
@@ -29,9 +36,9 @@ const App = () => {
         authProvider={authProvider}
         layout={MyLayout}
       >
-        <Resource name="users" list={<ListUsers />} />
-        <Resource name="domicilios" list={<ListAddress />} />
-        <Resource name="productos" list={<ListProducts />} />
+        <Resource name="users" list={<ListUsers />} edit={<EditUsers/>} create={<CreateUsers />} />
+        <Resource name="domicilios" recordRepresentation="calle" edit={<EditAddress />} list={<ListAddress />} create={<CreateAddress />} />
+        <Resource name="productos" list={<ListProducts />} edit={<EditProducts />} create={<CreateProducts />} />
         {/* 
         <Resource name="productos" list={<ListProducts />} />
         <CustomRoutes>

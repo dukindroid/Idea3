@@ -9,7 +9,7 @@ export const ListProducts = () => {
       {/* The rest of your application */}
       <div>ListProducts</div>
       <List>
-        <Datagrid>
+        <Datagrid rowClick="edit">
           <MyImageField source="imagen" />
           <TextField source="nombre" />
           <TextField source="precio" />
